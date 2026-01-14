@@ -46,24 +46,27 @@ const features = [
             <p class="section-subtitle">No frases sueltas arrancadas de contexto, sino filosofía completa. No herramientas de optimización, sino instrumentos para examinar tus juicios y reeducar tu mente.</p>
         </div>
         
-        <div class="features-grid">
+        <div class="features-layout">
+            <!-- Imagen central -->
+            <div class="features-center">
+                <img src="/assets/images/caracteristica-1.png" alt="El Estoico App Preview" class="features-center-image" />
+            </div>
+            
+            <!-- Características alrededor -->
             {features.map((feature) => (
-                <div class="feature-card-modern" data-feature={feature.id}>
-                    <div class="feature-icon-wrapper">
-                        <div class="feature-icon-circle-modern">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feature-icon-modern" set:html={feature.icon} />
+                <div class={`feature-item feature-${feature.id}`} data-feature={feature.id}>
+                    <div class="feature-connector"></div>
+                    <div class="feature-content">
+                        <div class="feature-text">
+                            <h3 class="feature-title">{feature.title}</h3>
+                            <p class="feature-description">{feature.description}</p>
+                        </div>
+                        <div class="feature-icon-wrapper">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feature-icon" set:html={feature.icon} />
                         </div>
                     </div>
-                    <h3 class="feature-title-modern">{feature.title}</h3>
-                    <p class="feature-description-modern">{feature.description}</p>
                 </div>
             ))}
-        </div>
-        
-        <div class="features-phone-showcase">
-            <div class="phone-preview-features-modern">
-                <img src="/assets/images/hero-iphone~dark-6KYLSRYT.png" alt="El Estoico App Preview" id="feature-phone-preview" class="phone-preview-img-modern" />
-            </div>
         </div>
     </div>
 </section>
