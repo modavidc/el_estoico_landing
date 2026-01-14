@@ -1,0 +1,273 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout
+    title="Política de Privacidad - El Estoico"
+    description="Política de privacidad de El Estoico. Conoce cómo manejamos tu información y proteges tu privacidad."
+>
+    <Nav />
+<section class="features" style="padding-top: 4rem;">
+        <div class="container" style="max-width: 48rem;">
+            <div style="margin-bottom: 3rem;">
+                <h1 class="section-title" style="font-size: 2.5rem; margin-bottom: 1rem;">Política de Privacidad</h1>
+                <p style="color: rgb(var(--muted-foreground)); font-size: 0.9375rem;">
+                    Versión 1.0.0 | Última actualización: Enero 2026
+                </p>
+            </div>
+
+            <div style="line-height: 1.8; color: rgb(var(--foreground));">
+                <div style="margin-bottom: 2.5rem;">
+                    <h2 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; letter-spacing: -0.02em;">1. INFORMACIÓN GENERAL</h2>
+                    <p style="margin-bottom: 1rem;">
+                        El Estoico ("nosotros", "nuestro" o "la aplicación") es una aplicación móvil desarrollada para ayudarte a practicar la filosofía estoica diariamente. Esta Política de Privacidad describe cómo manejamos la información cuando utilizas nuestra aplicación.
+                    </p>
+                    <p>
+                        Al descargar, instalar y utilizar El Estoico, aceptas las prácticas descritas en esta política de privacidad.
+                    </p>
+                </div>
+
+                <div style="margin-bottom: 2.5rem;">
+                    <h2 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; letter-spacing: -0.02em;">2. INFORMACIÓN QUE RECOPILAMOS</h2>
+                    
+                    <h3 style="font-size: 1.25rem; font-weight: 600; margin-top: 1.5rem; margin-bottom: 0.75rem;">2.1. Información que NO recopilamos</h3>
+                    <p style="margin-bottom: 1rem;">
+                        El Estoico funciona completamente offline y no recopila información personal identificable de los usuarios. Específicamente:
+                    </p>
+                    <ul style="margin-left: 1.5rem; margin-bottom: 1rem; list-style-type: disc;">
+                        <li style="margin-bottom: 0.5rem;">NO recopilamos nombres, direcciones de correo electrónico, números de teléfono u otra información de contacto</li>
+                        <li style="margin-bottom: 0.5rem;">NO recopilamos información de ubicación (GPS)</li>
+                        <li style="margin-bottom: 0.5rem;">NO recopilamos información de dispositivos o identificadores únicos</li>
+                        <li style="margin-bottom: 0.5rem;">NO recopilamos información de uso o analytics que identifique usuarios individuales</li>
+                        <li style="margin-bottom: 0.5rem;">NO recopilamos información de cuentas de redes sociales</li>
+                        <li style="margin-bottom: 0.5rem;">NO recopilamos información financiera o de pago</li>
+                        <li style="margin-bottom: 0.5rem;">NO enviamos datos a servidores externos o terceros</li>
+                    </ul>
+
+                    <h3 style="font-size: 1.25rem; font-weight: 600; margin-top: 1.5rem; margin-bottom: 0.75rem;">2.2. Información almacenada localmente</h3>
+                    <p style="margin-bottom: 1rem;">
+                        La aplicación almacena la siguiente información únicamente en tu dispositivo:
+                    </p>
+                    <p style="margin-bottom: 0.75rem;"><strong>a) Datos del diario personal:</strong></p>
+                    <ul style="margin-left: 1.5rem; margin-bottom: 1rem; list-style-type: disc;">
+                        <li style="margin-bottom: 0.5rem;">Reflexiones escritas por texto</li>
+                        <li style="margin-bottom: 0.5rem;">Reflexiones grabadas por audio (archivos de audio almacenados localmente)</li>
+                        <li style="margin-bottom: 0.5rem;">Imágenes del cuaderno físico (fotografías tomadas o seleccionadas por el usuario)</li>
+                        <li style="margin-bottom: 0.5rem;">Fechas y timestamps de las reflexiones</li>
+                    </ul>
+                    <p style="margin-bottom: 0.75rem;"><strong>b) Preferencias de la aplicación:</strong></p>
+                    <ul style="margin-left: 1.5rem; margin-bottom: 1rem; list-style-type: disc;">
+                        <li style="margin-bottom: 0.5rem;">Configuración de notificaciones (hora, días de la semana)</li>
+                        <li style="margin-bottom: 0.5rem;">Preferencias de visualización</li>
+                        <li style="margin-bottom: 0.5rem;">Configuración de la aplicación</li>
+                    </ul>
+                    <p style="margin-bottom: 0.75rem;"><strong>c) Datos de uso local:</strong></p>
+                    <ul style="margin-left: 1.5rem; margin-bottom: 1rem; list-style-type: disc;">
+                        <li style="margin-bottom: 0.5rem;">Citas marcadas como favoritas</li>
+                        <li style="margin-bottom: 0.5rem;">Historial de citas vistas</li>
+                        <li style="margin-bottom: 0.5rem;">Citas compartidas</li>
+                        <li style="margin-bottom: 0.5rem;">Métricas de progreso (racha diaria, tiempo invertido, contadores de interacciones)</li>
+                        <li style="margin-bottom: 0.5rem;">Progreso diario de citas leídas</li>
+                    </ul>
+                    <p style="margin-bottom: 0.75rem;"><strong>d) Datos técnicos locales:</strong></p>
+                    <ul style="margin-left: 1.5rem; margin-bottom: 1rem; list-style-type: disc;">
+                        <li style="margin-bottom: 0.5rem;">Estado de la aplicación</li>
+                        <li style="margin-bottom: 0.5rem;">Cache de datos para optimización de rendimiento</li>
+                    </ul>
+                    <p style="margin-bottom: 1rem;">
+                        TODA esta información se almacena exclusivamente en tu dispositivo usando:
+                    </p>
+                    <ul style="margin-left: 1.5rem; margin-bottom: 1rem; list-style-type: disc;">
+                        <li style="margin-bottom: 0.5rem;">SharedPreferences (para preferencias simples)</li>
+                        <li style="margin-bottom: 0.5rem;">Hive (base de datos local para datos estructurados)</li>
+                        <li style="margin-bottom: 0.5rem;">Sistema de archivos del dispositivo (para imágenes y archivos de audio)</li>
+                    </ul>
+                </div>
+
+                <div style="margin-bottom: 2.5rem;">
+                    <h2 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; letter-spacing: -0.02em;">3. CÓMO USAMOS LA INFORMACIÓN</h2>
+                    
+                    <h3 style="font-size: 1.25rem; font-weight: 600; margin-top: 1.5rem; margin-bottom: 0.75rem;">3.1. Uso de datos locales</h3>
+                    <p style="margin-bottom: 1rem;">
+                        La información almacenada localmente se utiliza únicamente para:
+                    </p>
+                    <ul style="margin-left: 1.5rem; margin-bottom: 1rem; list-style-type: disc;">
+                        <li style="margin-bottom: 0.5rem;">Proporcionar funcionalidades de la aplicación (diario, favoritos, métricas)</li>
+                        <li style="margin-bottom: 0.5rem;">Mejorar tu experiencia de usuario dentro de la aplicación</li>
+                        <li style="margin-bottom: 0.5rem;">Mantener tus preferencias y configuraciones</li>
+                        <li style="margin-bottom: 0.5rem;">Permitir el funcionamiento offline de la aplicación</li>
+                    </ul>
+
+                    <h3 style="font-size: 1.25rem; font-weight: 600; margin-top: 1.5rem; margin-bottom: 0.75rem;">3.2. No compartimos información</h3>
+                    <ul style="margin-left: 1.5rem; margin-bottom: 1rem; list-style-type: disc;">
+                        <li style="margin-bottom: 0.5rem;">NO compartimos, vendemos, alquilamos o transferimos tu información a terceros</li>
+                        <li style="margin-bottom: 0.5rem;">NO utilizamos servicios de analytics de terceros que identifiquen usuarios</li>
+                        <li style="margin-bottom: 0.5rem;">NO utilizamos servicios de publicidad que rastreen usuarios</li>
+                        <li style="margin-bottom: 0.5rem;">NO enviamos datos a servidores externos</li>
+                    </ul>
+                </div>
+
+                <div style="margin-bottom: 2.5rem;">
+                    <h2 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; letter-spacing: -0.02em;">4. PERMISOS DE LA APLICACIÓN</h2>
+                    <p style="margin-bottom: 1rem;">
+                        La aplicación puede solicitar los siguientes permisos del sistema operativo. Todos son opcionales y puedes negarlos sin afectar el funcionamiento básico de la aplicación:
+                    </p>
+                    
+                    <h3 style="font-size: 1.25rem; font-weight: 600; margin-top: 1.5rem; margin-bottom: 0.75rem;">4.1. Notificaciones</h3>
+                    <p style="margin-bottom: 0.5rem;"><strong>Propósito:</strong> Enviar recordatorios diarios configurables para tu práctica estoica</p>
+                    <p style="margin-bottom: 0.5rem;"><strong>Uso:</strong> Programar notificaciones locales en el horario que configures</p>
+                    <p style="margin-bottom: 0.5rem;"><strong>Datos:</strong> Solo se almacena localmente la configuración de hora y días</p>
+                    <p style="margin-bottom: 1rem;"><strong>Puedes desactivar:</strong> En cualquier momento desde la configuración de la app o del sistema</p>
+
+                    <h3 style="font-size: 1.25rem; font-weight: 600; margin-top: 1.5rem; margin-bottom: 0.75rem;">4.2. Almacenamiento</h3>
+                    <p style="margin-bottom: 0.5rem;"><strong>Propósito:</strong> Guardar imágenes generadas al compartir citas, acceder a imágenes de la galería para el cuaderno físico, guardar archivos de audio de reflexiones</p>
+                    <p style="margin-bottom: 0.5rem;"><strong>Uso:</strong> Solo para guardar y acceder a archivos que tú creas o seleccionas</p>
+                    <p style="margin-bottom: 0.5rem;"><strong>Datos:</strong> Solo archivos que tú generas o seleccionas</p>
+                    <p style="margin-bottom: 1rem;"><strong>Puedes desactivar:</strong> Negando el permiso cuando se solicite</p>
+
+                    <h3 style="font-size: 1.25rem; font-weight: 600; margin-top: 1.5rem; margin-bottom: 0.75rem;">4.3. Cámara</h3>
+                    <p style="margin-bottom: 0.5rem;"><strong>Propósito:</strong> Tomar fotografías de reflexiones escritas en papel (cuaderno físico)</p>
+                    <p style="margin-bottom: 0.5rem;"><strong>Uso:</strong> Solo cuando activamente usas la función de tomar foto</p>
+                    <p style="margin-bottom: 0.5rem;"><strong>Datos:</strong> Las imágenes se almacenan solo en tu dispositivo</p>
+                    <p style="margin-bottom: 1rem;"><strong>Puedes desactivar:</strong> Negando el permiso cuando se solicite</p>
+
+                    <h3 style="font-size: 1.25rem; font-weight: 600; margin-top: 1.5rem; margin-bottom: 0.75rem;">4.4. Micrófono</h3>
+                    <p style="margin-bottom: 0.5rem;"><strong>Propósito:</strong> Grabar reflexiones habladas para análisis</p>
+                    <p style="margin-bottom: 0.5rem;"><strong>Uso:</strong> Solo durante la grabación activa de audio</p>
+                    <p style="margin-bottom: 0.5rem;"><strong>Datos:</strong> Los archivos de audio se almacenan solo en tu dispositivo</p>
+                    <p style="margin-bottom: 1rem;"><strong>Puedes desactivar:</strong> Negando el permiso cuando se solicite</p>
+                </div>
+
+                <div style="margin-bottom: 2.5rem;">
+                    <h2 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; letter-spacing: -0.02em;">5. SERVICIOS DE TERCEROS</h2>
+                    
+                    <h3 style="font-size: 1.25rem; font-weight: 600; margin-top: 1.5rem; margin-bottom: 0.75rem;">5.1. Compartir contenido</h3>
+                    <p style="margin-bottom: 1rem;">
+                        Cuando compartes citas usando la función de compartir de la aplicación:
+                    </p>
+                    <ul style="margin-left: 1.5rem; margin-bottom: 1rem; list-style-type: disc;">
+                        <li style="margin-bottom: 0.5rem;">El contenido se comparte a través de las aplicaciones instaladas en tu dispositivo (WhatsApp, Instagram, Facebook, etc.)</li>
+                        <li style="margin-bottom: 0.5rem;">La aplicación NO tiene acceso a tus contactos, mensajes o actividad en esas aplicaciones</li>
+                        <li style="margin-bottom: 0.5rem;">El contenido compartido es generado localmente en tu dispositivo</li>
+                        <li style="margin-bottom: 0.5rem;">No se rastrea si compartiste o no el contenido</li>
+                    </ul>
+
+                    <h3 style="font-size: 1.25rem; font-weight: 600; margin-top: 1.5rem; margin-bottom: 0.75rem;">5.2. Enlaces externos</h3>
+                    <p style="margin-bottom: 1rem;">
+                        La aplicación puede incluir enlaces a sitios web externos (por ejemplo, enlaces a libros en Amazon):
+                    </p>
+                    <ul style="margin-left: 1.5rem; margin-bottom: 1rem; list-style-type: disc;">
+                        <li style="margin-bottom: 0.5rem;">Estos enlaces se abren en tu navegador predeterminado</li>
+                        <li style="margin-bottom: 0.5rem;">No recopilamos información sobre tu navegación</li>
+                        <li style="margin-bottom: 0.5rem;">No tenemos control sobre las políticas de privacidad de sitios web externos</li>
+                        <li style="margin-bottom: 0.5rem;">Te recomendamos revisar las políticas de privacidad de esos sitios</li>
+                    </ul>
+
+                    <h3 style="font-size: 1.25rem; font-weight: 600; margin-top: 1.5rem; margin-bottom: 0.75rem;">5.3. Text-to-Speech y Speech-to-Text</h3>
+                    <p style="margin-bottom: 1rem;">
+                        La aplicación utiliza servicios del sistema operativo para:
+                    </p>
+                    <ul style="margin-left: 1.5rem; margin-bottom: 1rem; list-style-type: disc;">
+                        <li style="margin-bottom: 0.5rem;">Text-to-Speech: Leer citas en voz alta (usa el motor TTS de tu dispositivo)</li>
+                        <li style="margin-bottom: 0.5rem;">Speech-to-Text: Convertir audio a texto (usa el servicio de reconocimiento de voz de tu dispositivo)</li>
+                        <li style="margin-bottom: 0.5rem;">Estos servicios funcionan completamente offline en tu dispositivo</li>
+                        <li style="margin-bottom: 0.5rem;">No se envía audio a servidores externos</li>
+                    </ul>
+                </div>
+
+                <div style="margin-bottom: 2.5rem;">
+                    <h2 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; letter-spacing: -0.02em;">6. SEGURIDAD DE LOS DATOS</h2>
+                    
+                    <h3 style="font-size: 1.25rem; font-weight: 600; margin-top: 1.5rem; margin-bottom: 0.75rem;">6.1. Almacenamiento local</h3>
+                    <ul style="margin-left: 1.5rem; margin-bottom: 1rem; list-style-type: disc;">
+                        <li style="margin-bottom: 0.5rem;">Todos los datos se almacenan localmente en tu dispositivo</li>
+                        <li style="margin-bottom: 0.5rem;">Los datos están protegidos por las medidas de seguridad de tu dispositivo (bloqueo de pantalla, encriptación del dispositivo)</li>
+                        <li style="margin-bottom: 0.5rem;">No tenemos acceso a tus datos almacenados localmente</li>
+                    </ul>
+
+                    <h3 style="font-size: 1.25rem; font-weight: 600; margin-top: 1.5rem; margin-bottom: 0.75rem;">6.2. Eliminación de datos</h3>
+                    <p style="margin-bottom: 1rem;">
+                        Puedes eliminar todos los datos de la aplicación en cualquier momento:
+                    </p>
+                    <ul style="margin-left: 1.5rem; margin-bottom: 1rem; list-style-type: disc;">
+                        <li style="margin-bottom: 0.5rem;">Desinstalando la aplicación (esto elimina todos los datos almacenados)</li>
+                        <li style="margin-bottom: 0.5rem;">O usando la función de "Eliminar datos" en la configuración de tu dispositivo</li>
+                    </ul>
+                </div>
+
+                <div style="margin-bottom: 2.5rem;">
+                    <h2 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; letter-spacing: -0.02em;">7. MENORES DE EDAD</h2>
+                    <p>
+                        El Estoico no está dirigido a menores de 13 años. No recopilamos conscientemente información personal de menores de 13 años. Si eres padre o tutor y crees que tu hijo menor de 13 años nos ha proporcionado información, contáctanos para eliminar esa información.
+                    </p>
+                </div>
+
+                <div style="margin-bottom: 2.5rem;">
+                    <h2 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; letter-spacing: -0.02em;">8. TUS DERECHOS</h2>
+                    <p style="margin-bottom: 1rem;">
+                        Tienes los siguientes derechos respecto a tus datos:
+                    </p>
+                    <ul style="margin-left: 1.5rem; margin-bottom: 1rem; list-style-type: disc;">
+                        <li style="margin-bottom: 0.5rem;"><strong>Acceso:</strong> Puedes acceder a todos tus datos a través de la aplicación</li>
+                        <li style="margin-bottom: 0.5rem;"><strong>Eliminación:</strong> Puedes eliminar todos tus datos desinstalando la aplicación</li>
+                        <li style="margin-bottom: 0.5rem;"><strong>Portabilidad:</strong> Puedes exportar tus reflexiones (si implementamos esta función en el futuro)</li>
+                        <li style="margin-bottom: 0.5rem;"><strong>Control:</strong> Tienes control total sobre qué permisos otorgas a la aplicación</li>
+                    </ul>
+                </div>
+
+                <div style="margin-bottom: 2.5rem;">
+                    <h2 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; letter-spacing: -0.02em;">9. CAMBIOS A ESTA POLÍTICA DE PRIVACIDAD</h2>
+                    <p style="margin-bottom: 1rem;">
+                        Podemos actualizar esta Política de Privacidad ocasionalmente. Te notificaremos de cualquier cambio:
+                    </p>
+                    <ul style="margin-left: 1.5rem; margin-bottom: 1rem; list-style-type: disc;">
+                        <li style="margin-bottom: 0.5rem;">Publicando la nueva política en esta página</li>
+                        <li style="margin-bottom: 0.5rem;">Actualizando la fecha de "Última actualización"</li>
+                        <li style="margin-bottom: 0.5rem;">Si los cambios son significativos, podemos notificarte a través de la aplicación</li>
+                    </ul>
+                    <p>
+                        Te recomendamos revisar esta política periódicamente para estar informado sobre cómo protegemos tu información.
+                    </p>
+                </div>
+
+                <div style="margin-bottom: 2.5rem;">
+                    <h2 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; letter-spacing: -0.02em;">10. CUMPLIMIENTO LEGAL</h2>
+                    <p style="margin-bottom: 1rem;">
+                        Esta política de privacidad cumple con:
+                    </p>
+                    <ul style="margin-left: 1.5rem; margin-bottom: 1rem; list-style-type: disc;">
+                        <li style="margin-bottom: 0.5rem;">Reglamento General de Protección de Datos (RGPD) de la Unión Europea</li>
+                        <li style="margin-bottom: 0.5rem;">Ley de Privacidad del Consumidor de California (CCPA)</li>
+                        <li style="margin-bottom: 0.5rem;">Leyes de protección de datos aplicables en tu jurisdicción</li>
+                    </ul>
+                </div>
+
+                <div style="margin-bottom: 2.5rem;">
+                    <h2 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; letter-spacing: -0.02em;">11. CONTACTO</h2>
+                    <p style="margin-bottom: 1rem;">
+                        Si tienes preguntas, inquietudes o solicitudes sobre esta Política de Privacidad o sobre cómo manejamos tus datos, puedes contactarnos en:
+                    </p>
+                    <p style="margin-bottom: 0.5rem;"><strong>Email:</strong> [TU_EMAIL_DE_SOPORTE]</p>
+                    <p style="margin-bottom: 1rem;"><strong>Sitio web:</strong> [TU_SITIO_WEB]</p>
+                    <p>
+                        Nos comprometemos a responder a tus consultas en un plazo razonable.
+                    </p>
+                </div>
+
+                <div style="margin-bottom: 2.5rem;">
+                    <h2 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; letter-spacing: -0.02em;">12. CONSENTIMIENTO</h2>
+                    <p>
+                        Al usar El Estoico, consientes el procesamiento de tu información según se describe en esta Política de Privacidad. Si no estás de acuerdo con esta política, por favor no uses la aplicación.
+                    </p>
+                </div>
+            </div>
+
+            <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgb(var(--border)); text-align: center;">
+                <a href="/" class="btn btn-primary">Volver al inicio</a>
+            </div>
+        </div>
+    </section>
+    <Footer />
+</Layout>

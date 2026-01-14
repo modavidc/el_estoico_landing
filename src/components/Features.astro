@@ -1,0 +1,69 @@
+---
+const features = [
+    {
+        id: 1,
+        title: "Sabiduría de los estoicos",
+        description: "Citas de 47 filósofos estoicos, desde los antiguos hasta los modernos. No se trata de leer más, sino de reflexionar mejor.",
+        icon: `<path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path>`
+    },
+    {
+        id: 2,
+        title: "Por categorías",
+        description: "Virtud, sabiduría, resiliencia, gratitud y más. Filosofía completa organizada por temas esenciales.",
+        icon: `<path d="M3 3v18h18"></path><path d="M18 7v10"></path><path d="M13 10v7"></path><path d="M8 13v4"></path>`
+    },
+    {
+        id: 3,
+        title: "Cronología educativa",
+        description: "Recorre la evolución del estoicismo desde la antigua Grecia hasta la actualidad.",
+        icon: `<rect width="18" height="18" x="3" y="4" rx="2" ry="2"></rect><line x1="16" x2="16" y1="2" y2="6"></line><line x1="8" x2="8" y1="2" y2="6"></line><line x1="3" x2="21" y1="10" y2="10"></line>`
+    },
+    {
+        id: 4,
+        title: "Formas de reflexionar",
+        description: "Texto, audio, cuaderno físico. Elige la forma que mejor se adapte a tu momento.",
+        icon: `<path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>`
+    },
+    {
+        id: 5,
+        title: "Diario personal",
+        description: "Examina tus juicios, no los reprimas. Guarda tus reflexiones en texto, audio o cuaderno físico.",
+        icon: `<path d="M3 3h7v7H3z"></path><path d="M14 3h7v7h-7z"></path><path d="M14 14h7v7h-7z"></path><path d="M3 14h7v7H3z"></path>`
+    },
+    {
+        id: 6,
+        title: "Privacidad total",
+        description: "Funciona completamente offline. Sin necesidad de cuenta. Todo se guarda localmente.",
+        icon: `<path d="M3 12h18"></path><path d="M3 6h18"></path><path d="M3 18h18"></path>`
+    }
+];
+---
+
+<section id="features" class="features">
+    <div class="container">
+        <div class="features-header">
+            <h2 class="section-title">Características</h2>
+            <p class="section-subtitle">No frases sueltas arrancadas de contexto, sino filosofía completa. No herramientas de optimización, sino instrumentos para examinar tus juicios y reeducar tu mente.</p>
+        </div>
+        
+        <div class="features-grid">
+            {features.map((feature) => (
+                <div class="feature-card-modern" data-feature={feature.id}>
+                    <div class="feature-icon-wrapper">
+                        <div class="feature-icon-circle-modern">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feature-icon-modern" set:html={feature.icon} />
+                        </div>
+                    </div>
+                    <h3 class="feature-title-modern">{feature.title}</h3>
+                    <p class="feature-description-modern">{feature.description}</p>
+                </div>
+            ))}
+        </div>
+        
+        <div class="features-phone-showcase">
+            <div class="phone-preview-features-modern">
+                <img src="/assets/images/hero-iphone~dark-6KYLSRYT.png" alt="El Estoico App Preview" id="feature-phone-preview" class="phone-preview-img-modern" />
+            </div>
+        </div>
+    </div>
+</section>

@@ -12,8 +12,7 @@ services:
       dockerfile: ${DOCKERFILE:-Dockerfile}
     container_name: ${CONTAINER_NAME:-el-estoico-landing}
     restart: ${RESTART_POLICY:-always}
-    ports:
-      - "${PORT:-3000}:${PORT:-3000}"
+    # No exponer puertos directamente, Traefik maneja el enrutamiento
     labels:
       - "traefik.enable=${TRAEFIK_ENABLE:-true}"
       - "traefik.docker.network=web"

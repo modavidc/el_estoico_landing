@@ -1,22 +1,65 @@
+---
+interface Props {
+    title: string;
+    description?: string;
+    ogTitle?: string;
+    ogDescription?: string;
+}
+
+const {
+    title,
+    description = "El estoicismo no promete felicidad inmediata, promete coherencia moral. Examina tus juicios, no los reprimas. Reeduca tu mente, no la anestesies.",
+    ogTitle = title,
+    ogDescription = description,
+} = Astro.props;
+---
+
 <!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/png" href="/assets/images/logo-3d-128-7RVCGBV5.png" />
+        <meta name="description" content={description} />
+        <meta name="author" content="El Estoico" />
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={ogTitle} />
+        <meta property="og:description" content={ogDescription} />
+
+        <!-- Twitter -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={ogTitle} />
+        <meta name="twitter:description" content={ogDescription} />
+
+        <!-- Structured Data for SEO -->
+        <script type="application/ld+json" set:html={JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "MobileApplication",
+            "name": "El Estoico",
+            "description": "Aplicación móvil para practicar la filosofía estoica diariamente. Reflexión profunda, coherencia moral y herramientas para examinar tus juicios. No es sobre productividad, es sobre virtud.",
+            "applicationCategory": "LifestyleApplication",
+            "operatingSystem": "iOS, Android",
+            "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "USD"
+            },
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.8",
+                "ratingCount": "150"
+            }
+        })} />
+
+        <title>{title}</title>
+    </head>
+    <body>
+        <slot />
+    </body>
 </html>
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
+<style is:global>
+    @import '../styles/global.css';
 </style>
