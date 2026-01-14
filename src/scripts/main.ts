@@ -10,7 +10,9 @@ document.addEventListener('DOMContentLoaded', function() {
             // Skip if it's just "#"
             if (href === '#') return;
             
-            const target = document.querySelector(href);
+            // Extract the hash part from href (handles both "#section" and "/#section" formats)
+            const hash = href.includes('#') ? href.substring(href.indexOf('#')) : href;
+            const target = document.querySelector(hash);
             
             if (target) {
                 e.preventDefault();
@@ -114,7 +116,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // Features section - Phone preview animation
-    const featureCards = document.querySelectorAll('.feature-card');
+    const featureCards = document.querySelectorAll('.feature-card-modern');
     const phonePreview = document.getElementById('feature-phone-preview') as HTMLImageElement;
     
     if (featureCards.length > 0 && phonePreview) {

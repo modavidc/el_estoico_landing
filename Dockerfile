@@ -33,4 +33,8 @@ COPY --from=build /app/dist ./dist
 EXPOSE 3000
 
 # Iniciar serve para servir archivos estáticos
-CMD ["serve", "-s", "dist", "-l", "3000"]
+# -s: Single Page Application mode (maneja rutas de Astro correctamente)
+# -l: Puerto
+# --no-clipboard: No copiar URL al portapapeles
+# --cors: Habilitar CORS si es necesario
+CMD ["serve", "-s", "dist", "-l", "3000", "--no-clipboard"]
