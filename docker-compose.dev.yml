@@ -1,0 +1,25 @@
+# docker-compose.dev.yml
+# Configuración para desarrollo local
+
+networks:
+  web:
+    driver: bridge
+
+services:
+  el-estoico-landing:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    container_name: el-estoico-landing-dev
+    restart: unless-stopped
+    ports:
+      - "4321:4321"  # Puerto de desarrollo de Astro
+    volumes:
+      # Montar código fuente para hot reload
+      - .:/app
+      - /app/node_modules  # Excluir node_modules del volumen para mejor rendimiento
+      - /app/dist          # Excluir dist del volumen
+    environment:
+      - NODE_ENV=development
+    networks:
+      - web

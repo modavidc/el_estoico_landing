@@ -1,0 +1,25 @@
+# docker-compose.prod.yml
+# Configuración para producción con Traefik
+
+networks:
+  web:
+    external: true
+
+services:
+  el-estoico-landing:
+    build:
+      context: .
+      dockerfile: ${DOCKERFILE:-Dockerfile}
+    container_name: ${CONTAINER_NAME:-el-estoico-landing}
+    restart: ${RESTART_POLICY:-always}
+    ports:
+      - "${PORT:-3000}:${PORT:-3000}"
+    labels:
+      - "traefik.enable=${TRAEFIK_ENABLE:-true}"
+      - "traefik.docker.network=web"
+      - "traefik.http.routers.el-estoico-landing.entrypoints=websecure"
+      - "traefik.http.routers.el-estoico-landing.rule=Host(`${DOMAIN:-elestoico.modavidc.com}`)"
+      - "traefik.http.routers.el-estoico-landing.tls.certresolver=http-resolv"
+      - "traefik.http.services.el-estoico-landing.loadbalancer.server.port=${SERVICE_PORT:-3000}"
+    networks:
+      - web

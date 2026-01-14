@@ -1,0 +1,14 @@
+# Dockerfile para desarrollo de Astro con hot reload
+FROM node:20-alpine
+
+WORKDIR /app
+
+# Instalar dependencias (usamos npm install para desarrollo, más flexible)
+COPY package.json package-lock.json* ./
+RUN npm install
+
+# Exponer puerto de desarrollo de Astro
+EXPOSE 4321
+
+# Comando para desarrollo con hot reload
+CMD ["npm", "run", "dev", "--", "--host"]
